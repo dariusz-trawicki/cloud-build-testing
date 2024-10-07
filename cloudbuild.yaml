@@ -1,7 +1,17 @@
+# steps:
+#   - name: 'alpine'  # Using a lightweight Docker image
+#     entrypoint: 'echo'
+#     args: 
+#       - 'Hello, World!'
+# logsBucket: 'gs://trigger-exp-dt-bucket'
+
 steps:
-- name: 'gcr.io/cloud-builders/docker'
-  script: |
-    docker build -t us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1 .
-  automapSubstitutions: true
-images:
-- 'us-west2-docker.pkg.dev/$PROJECT_ID/quickstart-docker-repo/quickstart-image:tag1'
+  - name: ubuntu
+    args:
+      - '-c'
+      - |
+        echo "hello world"
+        date
+        hostname
+    entrypoint: bash
+logsBucket: 'gs://trigger-exp-dt-bucket'
