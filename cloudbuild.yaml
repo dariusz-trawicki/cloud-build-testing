@@ -14,4 +14,5 @@ steps:
         date
         hostname
     entrypoint: bash
+service_account: cloudbuild-sa@trigger-exp-id.iam.gserviceaccount.com
 logsBucket: 'gs://trigger-exp-dt-bucket'
