@@ -15,9 +15,3 @@ steps:
         hostname
     entrypoint: bash
 logsBucket: 'gs://trigger-exp-dt-bucket'
-
-# # dodaje ponizsze dla webhook bo nie chodzi:
-# options:
-#   logging: CLOUD_LOGGING_ONLY
-# # service_account: cloudbuild-sa@trigger-exp-id.iam.gserviceaccount.com
-# service_account: 790415357996-compute@developer.gserviceaccount.com
